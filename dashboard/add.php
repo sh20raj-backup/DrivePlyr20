@@ -116,6 +116,12 @@ function isDriveLink(url) {
                         <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="">
                       </div>
                     </div>
+                    <div>
+                    <div id="upload-area">
+                        <p>Drag and drop an image here or click to select one.</p>
+                        <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    </div>
+                    </div>
                   </div>
                 </div>
                 <hr class="my-4"></hr>
@@ -143,5 +149,71 @@ function isDriveLink(url) {
       checkVideoURL();
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const inputPoster = document.getElementById('input-poster');
+
+        uploadArea.addEventListener('click', function () {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        uploadArea.addEventListener('dragover', function (e) {
+            e.preventDefault();
+            uploadArea.classList.add('drag-over');
+        });
+
+        uploadArea.addEventListener('dragleave', function () {
+            uploadArea.classList.remove('drag-over');
+        });
+
+        uploadArea.addEventListener('drop', function (e) {
+            e.preventDefault();
+            uploadArea.classList.remove('drag-over');
+            fileInput.files = e.dataTransfer.files;
+            handleFileSelect();
+        });
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+
+            if (file) {
+                uploadToImgur(file);
+            }
+        }
+
+        async function uploadToImgur(file) {
+            const clientId = '6db47bd7029562d'; // Replace with your Imgur API client ID
+            const apiUrl = 'https://api.imgur.com/3/image';
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        Authorization: `Client-ID ${clientId}`,
+                    },
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const imgUrl = data.data.link;
+
+                    inputPoster.value = imgUrl;
+                } else {
+                    console.error('Failed to upload to Imgur');
+                }
+            } catch (error) {
+                console.error('Error uploading to Imgur:', error);
+            }
+        }
+    });
+</script>
 </body>
 </html>
