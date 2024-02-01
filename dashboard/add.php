@@ -215,5 +215,13 @@ function isDriveLink(url) {
         }
     });
 </script>
+<style>
+        #upload-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </body>
 </html>
