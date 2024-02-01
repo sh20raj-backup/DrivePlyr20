@@ -52,7 +52,7 @@ include '../conn.php';
             </div>
             <!-- Light table -->
             <div class="table-responsive">
-              <table class="table align-items-center table-dark table-flush">
+              <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">Video</th>
