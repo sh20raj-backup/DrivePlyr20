@@ -58,17 +58,13 @@ die();*/
     <!-- Primary Meta Tags -->
 <title>DrivePlyr</title>
 <meta name="title" content="<?php echo $videoPosterURL ?>" />
-<meta name="description" content="DrivePlyr is a video sharing platform that allows users to upload, share, and view videos.
-
-" />
+<meta name="description" content="<?php echo $videoDescription ?> - DrivePlyr" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content="video.other" />
 <meta property="og:url" content="https://driveplyr.appspages.online/" />
 <meta property="og:title" content="<?php echo $videoTitle ?> - DrivePlyr" />
-<meta property="og:description" content="<?php echo $videoDescription ?> - DrivePlyr
-
-" />
+<meta property="og:description" content="<?php echo $videoDescription ?> - DrivePlyr" />
 <meta property="og:image" content="<?php echo $videoPosterURL ?>" />
 
 <!-- Twitter -->
