@@ -80,7 +80,7 @@ if ($result->num_rows > 0) {
         echo '<tr>
                 <th scope="row">
                   <div class="media align-items-center">
-                    <a href="player.html?id='.$videoId.'" class="mr-3">
+                    <a href="../watch/='.$videoId.'" class="mr-3">
                       <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
                     
                     <div class="media-body">

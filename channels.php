@@ -32,43 +32,12 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
 ?>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
-    <!-- Material Icons -->
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
+  <?php include 'assets/head.php' ?>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- CSS File -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/lux/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../styles.css" />
-    <title>DrivePlyr</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWQNYW0DQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-QBWQNYW0DQ');
-</script>
-    
-<link rel="manifest" href="../../manifest.json">
-<meta name="theme-color" content="#007bff">
-
-    <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('../../sw.js')
-        .then((registration) => {
-          console.log('ServiceWorker registration successful with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.log('ServiceWorker registration failed:', error);
-        });
-    });
-  }
-</script>
 
   </head>
   <body>
