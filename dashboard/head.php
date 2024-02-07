@@ -14,3 +14,12 @@
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/argon-dashboard-bs4@main/assets/css/argon.css?v=1.2.0" type="text/css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWQNYW0DQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QBWQNYW0DQ');
+</script>

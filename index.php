@@ -17,11 +17,21 @@ include 'func.php';
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
     <title>DrivePlyr</title>
+    <meta name="google-site-verification" content="ubhg9we6wc41fJACqLrs51HI0B3boz7ktsfdGaxD01Q" />
     <style>
 
     </style>
 <meta name="theme-color" content="#007bff">
 <link rel="manifest" href="manifest.json">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWQNYW0DQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QBWQNYW0DQ');
+</script>
 
 <script>
     // Check if the browser supports the beforeinstallprompt event

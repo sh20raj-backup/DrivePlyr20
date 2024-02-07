@@ -43,6 +43,15 @@ $description = isset(getUser($_GET['id'])[0]->description) ? getUser($_GET['id']
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/lux/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../styles.css" />
     <title>DrivePlyr</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWQNYW0DQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QBWQNYW0DQ');
+</script>
     
 <link rel="manifest" href="../../manifest.json">
 <meta name="theme-color" content="#007bff">

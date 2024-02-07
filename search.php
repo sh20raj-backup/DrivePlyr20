@@ -18,6 +18,15 @@ include 'func.php';
     <link rel="stylesheet" href="styles.css" />
     <title><?php echo $_GET['q'] ?> - Search - DrivePlyr</title>
     <style>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBWQNYW0DQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QBWQNYW0DQ');
+</script>
 
     </style>
 <meta name="theme-color" content="#007bff">
