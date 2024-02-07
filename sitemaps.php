@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'func.php';
 include 'conn.php';
 ?>
 <!DOCTYPE html>
@@ -80,7 +81,7 @@ if ($result->num_rows > 0) {
         echo '<tr>
                 <th scope="row">
                   <div class="media align-items-center">
-                    <a href="../watch/='.$videoId.'" class="mr-3">
+                    <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'" class="mr-3">
                       <img height="75px" alt="Video Poster" src="' . $videoPosterURL . '">
                     
                     <div class="media-body">
