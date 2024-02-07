@@ -56,7 +56,7 @@ die();*/
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 
     <!-- Primary Meta Tags -->
-<title>DrivePlyr</title>
+<title><?php echo $videoTitle ?> - DrivePlyr</title>
 <meta name="title" content="<?php echo $videoPosterURL ?>" />
 <meta name="description" content="<?php echo $videoDescription ?> - DrivePlyr" />
 
