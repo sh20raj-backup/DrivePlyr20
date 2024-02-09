@@ -15,7 +15,7 @@ ErrorDocument 404 /index.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^watch/(\d+)/?$ watch2.php?id=$1 [QSA,NC,L]
-  RewriteRule ^watch/(\d+)/([^/]+)/?$ watch.php?id=$1&title=$2 [QSA,NC,L]
+  RewriteRule ^watch/(\d+)/([^/]+)/?$ watch2.php?id=$1&title=$2 [QSA,NC,L]
   RewriteRule ^json/(\d+)/?$ json.php?id=$1 [QSA,NC,L]
   RewriteRule ^json/(\d+)/([^/]+)/?$ json.php?id=$1&title=$2 [QSA,NC,L]
 </IfModule>
