@@ -72,13 +72,11 @@ die();*/
 <meta property="twitter:title" content="<?php echo $videoPosterURL ?>" />
 <meta property="twitter:description" content="<?php echo $videoDescription ?> - DrivePlyr" />
 <meta property="twitter:image" content="<?php echo $videoPosterURL ?>" />
-
+<link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
-
-<link rel="stylesheet" href="styles.css" />
 <meta name="google-site-verification" content="ubhg9we6wc41fJACqLrs51HI0B3boz7ktsfdGaxD01Q" />
 <meta name="theme-color" content="#007bff">
 <link rel="manifest" href="manifest.json">
@@ -171,7 +169,11 @@ die();*/
             <div class="col-md-8">
                 <div class="embed-responsive embed-responsive-16by9">
                    
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+                <div id="myHeader">
+                <div style="overflow:hidden;" id="driveplyr<?php echo $id ?>"></div></div>
+                    <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
+                </div>
+    
                 </div>
 
                 <div class="mt-4">
@@ -194,7 +196,7 @@ die();*/
 
                     <!-- Comments section -->
                     <h5 class="mt-4">Comments</h5>
-                    <div class="card">
+                    <div class="comments">
                     <div id="disqus_thread"></div>
                             <script>
                                 /**
@@ -224,7 +226,7 @@ die();*/
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
-                            <img src="https://imgur.com/n5MBy0m.png" alt="Channel Logo" class="rounded-circle mr-2">
+                            <img src="https://imgur.com/n5MBy0m.png" height="50px" width="50px" alt="Channel Logo" class="rounded-circle mr-2">
                             <div>
                                 <a href="../../channel/<?php echo $userid ?>">
                                 <h5 class="card-title"><?php echo getUser($userid)[0]->name ?></h5>
@@ -339,6 +341,173 @@ die();*/
             <span class="text-muted">© 2024 DrivePlyr, Inc.</span>
         </div>
     </footer>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Share</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <h4>Copy Code to Embed This Video</h4>
+                  <center>
+                     <!-- Telegram -->
+                     <!-- ... (previous social media icons) ... -->
+                     <!-- Copy Code Button -->
+                     <button class="btn btn-success" onclick="copyCodeToClipboard()">Copy Code</button>
+                     <br><br><button id="copyButton" class="btn btn-primary">Copy Link</button>
+                     <div class="col-lg-4">
+                        <div class="form-group">
+                           <label class="form-control-label" for="player">Player - 
+                           <a target="_blank" rel="nofollow" data-toggle="tooltip" data-original-title="See Example on DrivePlyr Documentation" href="https://driveplyr.hashnode.dev/top-html5-custom-video-players-with-documentation-video">See Examples</a></label>
+                           <select onchange="document.getElementById('plyredit').innerHTML = document.getElementById('player').value" class="form-control" name="player" id="player">
+                              <option value="plyr">Plyr</option>
+                              <option value="sopplayer">SopPlayer</option>
+                              <option value="vlitejs">vLiteJS</option>
+                              <option value="griffith">griffith</option>
+                              <option value="videojs">VideoJS</option>
+                              <option value="jwplayer">JWPlayer</option>
+                              <option value="mediaelements">Mediaelements</option>
+                              <option value="clapper">Clapper</option>
+                              <option value="rainplayer">RainPlayer</option>
+                              <option value="openplayerjs">OpenPlayerJS</option>
+                              <option value="kwgplayer">KWGPlayer</option>
+                              <option value="ckin">Ckin</option>
+                              <option value="cutesu">CuteSu</option>
+                              <option value="xgplayer">XgPlayer</option>
+                              <option value="flowplayer">Flowplayer</option>
+                              <option value="fluid">Fluidplayer {Earn Money}</option>
+                              <option value="flamingo">Flamingo</option>
+                              <option value="redroselite">RedRoseLite</option>
+                              <option value="none">NONE</option>
+                           </select>
+                        </div>
+                     </div>
+                     <pre><code class="language-html">
+                      &lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
+                      &lt;script player="<span id="plyredit">fluid</span>" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
+                      </code></pre>
+                     <script>
+                        function copyCodeToClipboard() {
+                          const codeBlock = document.querySelector("pre code");
+                          const codeText = codeBlock.innerText;
+                        
+                          const textArea = document.createElement("textarea");
+                          textArea.value = codeText;
+                          document.body.appendChild(textArea);
+                        
+                          textArea.select();
+                          document.execCommand("copy");
+                          document.body.removeChild(textArea);
+                        
+                          alert("Code copied to clipboard!");
+                        }
+                     </script>
+                     <!-- Add Bootstrap JS and custom JavaScript -->
+                     <script>
+                        document.getElementById("copyButton").addEventListener("click", function() {
+                          var currentLink = window.location.href;
+                          var tempInput = document.createElement("input");
+                          tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+                          tempInput.value = currentLink;
+                          document.body.appendChild(tempInput);
+                          tempInput.select();
+                          document.execCommand("copy");
+                          document.body.removeChild(tempInput);
+                          alert("Current link copied to clipboard!");
+                        });
+                     </script>
+                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+                     <!-- ShareThis BEGIN -->
+                     <div class="sharethis-inline-share-buttons"></div>
+                     <!-- ShareThis END -->
+                     <!-- Telegram -->
+                     <a style="color: #ac2bac;" href="#!" role="button" onclick="shareToTelegram(); return false;">
+                     <i class="fab fa-telegram fa-lg"></i>
+                     </a>
+                     <!-- Facebook -->
+                     <a style="color: #3b5998;" href="#!" role="button" onclick="shareToFacebook(); return false;">
+                     <i class="fab fa-facebook-f fa-lg"></i>
+                     </a>
+                     <!-- Twitter -->
+                     <a style="color: #55acee;" href="#!" role="button" onclick="shareToTwitter(); return false;">
+                     <i class="fab fa-twitter fa-lg"></i>
+                     </a>
+                     <!-- Google
+                        <a style="color: #dd4b39;" href="#!" role="button" onclick="shareToGoogle(); return false;">
+                          <i class="fab fa-google fa-lg"></i>
+                        </a> -->
+                     <!-- Instagram -->
+                     <a style="color: #ac2bac;" href="#!" role="button" onclick="shareToInstagram(); return false;">
+                     <i class="fab fa-instagram fa-lg"></i>
+                     </a>
+                     <script>
+                        function shareToTelegram() {
+                          shareToSocialMedia('https://telegram.me/share/', getCurrentURLAndTitle());
+                        }
+                        
+                        function shareToFacebook() {
+                          shareToSocialMedia('https://www.facebook.com/sharer/sharer.php', getCurrentURLAndTitle());
+                        }
+                        
+                        function shareToTwitter() {
+                          shareToSocialMedia('https://twitter.com/intent/tweet', getCurrentURLAndTitle());
+                        }
+                        
+                        function shareToGoogle() {
+                          shareToSocialMedia('https://plus.google.com/share', getCurrentURLAndTitle());
+                        }
+                        
+                        function shareToInstagram() {
+                          shareToSocialMedia('https://www.instagram.com/share/url', getCurrentURLAndTitle());
+                        }
+                        
+                        function getCurrentURLAndTitle() {
+                          return {
+                            url: window.location.href,
+                            title: document.title
+                          };
+                        }
+                        
+                        function shareToSocialMedia(url, data) {
+                          var params = Object.keys(data).map(function (key) {
+                            return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+                          }).join('&');
+                        
+                          window.open(url + '?' + params, 'Share', 'width=600,height=400');
+                        }
+                     </script>
+                     <script>
+                        window.onscroll = function() {myFunction()};
+                        
+                        var header = document.getElementById("myHeader");
+                        var sticky = header.offsetTop;
+                        
+                        function myFunction() {
+                          if (window.pageYOffset > sticky) {
+                            header.classList.add("sticky");
+                          } else {
+                            header.classList.remove("sticky");
+                          }
+                        }
+                            
+                     </script>
+                  </center>
+               </div>
+               <!-- Modal footer -->
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <?php  include 'tracker.php';?>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
