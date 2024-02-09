@@ -76,6 +76,8 @@ function isDriveLink(url) {
                         data-original-title="Direct Link, Archive.org Link, Google Drive, Mediafire and others">Video URL <a target="_blank" href="https://driveplyr.hashnode.dev/supported-links">Supported Links</a> - 
                       <a target="_blank" href="https://driveplyr.appspages.online/watch/37/get-unlimited-video-hosting-using-github-release">Hosting</a></label>
                         <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
+                        <h6 class="heading-small text-muted mb-6">Don't have Video URL <a 
+                href="../../upload" target="_blank">Upload</a> </h6>
                         <div class="invalid-feedback">
                           Please enter a valid video URL.
                         </div>
@@ -113,12 +115,12 @@ function isDriveLink(url) {
                     <div class="col-lg-8">
                       <div class="form-group">
                         <label class="form-control-label" for="input-poster">Poster URL - <a target="_blank" rel="dofollow" href="https://codexdindia.blogspot.com/image-uploader">Get Image Link</a></label>
-                        <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="">
+                        <input type="text" id="input-poster" class="form-control" placeholder="Poster URL" name="poster_url" value="" required>
                       </div>
                     </div>
                     <div>
                     <div id="upload-area">
-                        <p>Drag and drop an image here or click to select one.</p>
+                        <p>Drag and drop an <b>image</b> here or click to select one.</p>
                         <input type="file" id="file-input" accept="image/*" style="display: none;">
                     </div>
                     </div>
