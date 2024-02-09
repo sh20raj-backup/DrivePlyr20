@@ -196,7 +196,7 @@ die();*/
 
                     <!-- Comments section -->
                     <h5 class="mt-4">Comments</h5>
-                    <div class="comments">
+                    <div class="card">
                     <div id="disqus_thread"></div>
                             <script>
                                 /**
