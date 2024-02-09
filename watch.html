@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Player</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">YouTube</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subscriptions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                   
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+                </div>
+
+                <div class="mt-4">
+                    <h4>Video Title</h4>
+                  <div class="text-muted">
+                        <span>1,234,567 views</span> • <span>Jan 1, 2024</span>
+                    </div>
+                    <p>Description of the video goes here.</p>
+
+                    <!-- Like, Dislike, Views, Date, Report, Download buttons -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-primary mr-2"><i class="material-icons">thumb_up</i></button>
+                            <button type="button" class="btn btn-sm btn-outline-danger mr-2"><i class="material-icons">thumb_down</i></button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary mr-2"><i class="material-icons">code</i></button>
+                            <button type="button" class="btn btn-sm btn-outline-danger mr-2"><i class="material-icons">flag</i></button>
+                            <button type="button" class="btn btn-sm btn-outline-success mr-2"><i class="material-icons">get_app</i></button>
+
+                        </div>
+                    </div>
+
+                    <!-- Comments section -->
+                    <h5 class="mt-4">Comments</h5>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Comment 1</p>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <p class="card-text">Comment 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Channel information -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50" alt="Channel Logo" class="rounded-circle mr-2">
+                            <div>
+                                <h5 class="card-title">Channel Name</h5>
+                                <p class="card-text">10M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended videos section -->
+                <h5 class="mt-4">Recommended Videos</h5>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="https://via.placeholder.com/800x450" alt="Video Thumbnail" class="img-fluid">
+                        <div class="caption">
+                            <h6 class="mt-2">Video Title 1</h6>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="https://via.placeholder.com/800x450" alt="Video Thumbnail" class="img-fluid">
+                        <div class="caption">
+                            <h6 class="mt-2">Video Title 2</h6>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="https://via.placeholder.com/800x450" alt="Video Thumbnail" class="img-fluid">
+                        <div class="caption">
+                            <h6 class="mt-2">Video Title 3</h6>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="https://via.placeholder.com/800x450" alt="Video Thumbnail" class="img-fluid">
+                        <div class="caption">
+                            <h6 class="mt-2">Video Title 4</h6>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="https://via.placeholder.com/800x450" alt="Video Thumbnail" class="img-fluid">
+                        <div class="caption">
+                            <h6 class="mt-2">Video Title 5</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 YouTube, Inc.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
