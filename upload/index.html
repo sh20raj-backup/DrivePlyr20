@@ -38,6 +38,13 @@
 
         <div id="uploadResult" class="mt-3" style="display: none;">
             <p>Upload complete! Here are the details:</p>
+            <hr>
+            <form action="https://driveplyr.appspages.online/dashboard/add.php" method="get">
+               <input type="text" name="url" id="url"> <button type="submit" aria-readonly="true"> CONTINUE UPLOAD </button>
+            </form>
+            
+
+            <hr>
             <p>File ID: <span id="fileId"></span></p>
             <p>File Name: <span id="fileName"></span></p>
             <p>File Size: <span id="fileSize"></span> bytes</p>
@@ -145,6 +152,7 @@
                         fileSize.text(data.size);
                         downloadLink.attr("href", "https://sopdrive.appspages.online/download/" + data.id);
                         document.getElementById("1").innerHTML = "https://sopdrive.appspages.online/download/" + data.id;
+                        document.getElementById("url").value = "https://sopdrive.appspages.online/download/" + data.id;
                         document.getElementById("2").innerHTML = "https://sopdrive.appspages.online/view/" + data.id;
                         sharingLink.attr("href", "https://sopdrive.appspages.online/view/" + data.id);
                         $('#2').html("https://sopdrive.appspages.online/view/" + data.id);
