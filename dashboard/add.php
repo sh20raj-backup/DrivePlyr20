@@ -77,7 +77,7 @@ function isDriveLink(url) {
                       <a target="_blank" href="https://driveplyr.appspages.online/watch/37/get-unlimited-video-hosting-using-github-release">Hosting</a></label>
                         <input id="input-url" class="form-control" placeholder="Video URL" name="url" value="" type="text" required>
                         <h6 class="heading-small text-muted mb-6">Don't have Video URL <a 
-                href="../../upload" target="_blank">Upload</a> </h6>
+                href="../../upload" target="_blank">Upload</a> or Use <a target="_blank" href="https://pixeldrain.com/">Pixel Drain</a> Uploaded Video Link </h6>
                         <div class="invalid-feedback">
                           Please enter a valid video URL.
                         </div>
