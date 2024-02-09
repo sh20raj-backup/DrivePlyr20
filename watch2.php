@@ -170,7 +170,7 @@ die();*/
                 <div class="embed-responsive embed-responsive-16by9">
                    
                 <div id="myHeader">
-                <div style="overflow:hidden;" id="driveplyr<?php echo $id ?>"></div></div>
+                <div style="overflow:hidden;" id="driveplyr<?php echo $id ?>"></div>
                     <script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
                 </div>
     
@@ -196,7 +196,7 @@ die();*/
 
                     <!-- Comments section -->
                     <h5 class="mt-4">Comments</h5>
-                    <div class="card">
+                    <div class="comments">
                     <div id="disqus_thread"></div>
                             <script>
                                 /**
