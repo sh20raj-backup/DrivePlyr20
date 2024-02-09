@@ -54,7 +54,10 @@ if(isset($_GET['poster'])){header('Location: '.$video['poster_url'].'');exit();}
      //$url = 'https://drive.google.com/u/0/uc?id='.extractDriveFileId($url).'&export=download&confirm=t&uuid=a1c96cdf-3e11-40ab-83f0-735abdafb560&at=ALt4Tm2yT0rWXZbVrYBNIsZG6Y4U:1689410760024';
     } elseif (strpos($url, 'mediafire.com') !== false) {
        $url = 'https://wholly-api.skinnyrunner.com/websites/mediafire.com/direct_download.php?id='.extractMediaFireFileId($url);
-    } elseif (strpos($url, 'youtube.com') !== false || strpos($url, 'youtu.be') !== false) {
+    } elseif(strpos($url, 'pixeldrain.com') !== false){
+        $url = "https://pixeldrain.com/api/file/".end(explode('/', $url));
+    }
+    elseif (strpos($url, 'youtube.com') !== false || strpos($url, 'youtu.be') !== false) {
        // return 'youtube';
     } elseif (strpos($url, 'vimeo.com') !== false) {
         //return 'vimeo';
