@@ -188,7 +188,7 @@ die();*/
                         <div>
                             <button type="button" class="btn btn-sm btn-outline-primary mr-2"><i class="material-icons">thumb_up</i></button>
                             <button type="button" class="btn btn-sm btn-outline-danger mr-2"><i class="material-icons">thumb_down</i></button>
-                            <button type="button" class="btn btn-sm btn-outline-info mr-2"><a href="https://www.reddit.com/r/submit?title=<?php echo $videoTitle ?> - DrivePlyr&url=https://driveplyr.appspages.online/watch/<?php echo $id ;  ?>" target="_blank"><i class="material-icons">reddit</i></a></button>
+                            <button type="button" class="btn btn-sm btn-outline-info mr-2"><a href="https://www.reddit.com/submit?title=<?php echo $videoTitle ?> - DrivePlyr&url=https://driveplyr.appspages.online/watch/<?php echo $id ;  ?>" target="_blank"><i class="material-icons">reddit</i></a></button>
                             <button type="button" class="btn btn-sm btn-outline-secondary mr-2" data-toggle="modal" data-target="#myModal"><i class="material-icons">code</i></button>
                             <a href="mailto:mail@appspages.online?subject=REPORT-OF-VIDEO-ID-<?php echo $id ;  ?>"><button type="button" class="btn btn-sm btn-outline-danger mr-2"><i class="material-icons">flag</i></button></a>
                             <?php if($videoAllowDownload){ echo '<a href="https://driveplyr.appspages.online/api/download.php?url='.$videoURL.'"><button type="button" class="btn btn-sm btn-outline-success mr-2"><i class="material-icons">get_app</i></button></a>' ;}?>
