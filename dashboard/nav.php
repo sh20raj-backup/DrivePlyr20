@@ -55,7 +55,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://driveplyrui.sh20raj.repl.co/">
+              <a class="nav-link" href="https://driveplyr.github.io/">
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">New Website</span>
               </a>
