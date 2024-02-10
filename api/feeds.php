@@ -7,7 +7,7 @@ include "../func.php";
 // Retrieve the video list from the database
 $user = $_SESSION['id'];
 $uploader = $_GET['id'];
-
+$logo = "http://aninex.com/images/srvc/web_de_icon.png":
 $limit = isset($_GET['limit'])?$limit:20;
 $sql = isset($sql) ? $sql : "SELECT * FROM videos ORDER BY RAND() LIMIT ".$limit."";
 
