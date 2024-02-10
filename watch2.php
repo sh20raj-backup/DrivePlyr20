@@ -354,6 +354,7 @@ die();*/
                <!-- Modal body -->
                <div class="modal-body">
                   <h4>Copy Code to Embed This Video</h4>
+                  <br><br>
                   <center>
                      <!-- Telegram -->
                      <!-- ... (previous social media icons) ... -->
@@ -387,10 +388,10 @@ die();*/
                            </select>
                         </div>
                      </div>
-                     <pre><code class="language-html">
-                      &lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
-                      &lt;script player="<span id="plyredit">fluid</span>" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
-                      </code></pre>
+<pre><code class="language-html">
+&lt;div id="driveplyr<?php echo $id ?>"&gt;&lt;/div&gt;
+&lt;script player="<span id="plyredit">fluid</span>" src="https://driveplyr.appspages.online/player.js" data-id="<?php echo $id ?>" data-height="500px" data-width="100%" data-type="driveplyr" defer&gt;&lt;/script&gt;
+</code></pre>
                      <script>
                         function copyCodeToClipboard() {
                           const codeBlock = document.querySelector("pre code");
