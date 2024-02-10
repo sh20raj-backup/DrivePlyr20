@@ -29,14 +29,8 @@ if ($result->num_rows > 0) {
         // Output the CSV data
         echo implode(",", $emails);
     } else {
-        // Set the "Content-Type" header to specify JSON format
-        header('Content-Type: application/json');
-
-        // Convert the $emails array to JSON format
-        $json = json_encode($emails);
-
-        // Print the JSON data
-        echo $json;
+        // Output the emails as comma-separated string
+        echo implode(",", $emails);
     }
 } else {
     echo "No users found.";
