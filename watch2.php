@@ -74,6 +74,7 @@ die();*/
 <meta property="twitter:image" content="<?php echo $videoPosterURL ?>" />
 <link rel="shortcut icon" href="../../logo.png" type="image/x-icon">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://articleplanet.github.io/assets/css/mediumish.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64bd1f4e71afd40013e96b95&product=sop' async='async'></script>
