@@ -364,6 +364,7 @@ die();*/
                      <br><br><button id="copyButton" class="btn btn-primary">Copy Link</button>
                      <div class="col-lg-4">
                         <div class="form-group">
+                            https://v.forn.fun/<?php echo $id ?>
                            <label class="form-control-label" for="player">Player - 
                            <a target="_blank" rel="nofollow" data-toggle="tooltip" data-original-title="See Example on DrivePlyr Documentation" href="https://driveplyr.hashnode.dev/top-html5-custom-video-players-with-documentation-video">See Examples</a></label>
                            <select onchange="document.getElementById('plyredit').innerHTML = document.getElementById('player').value" class="form-control" name="player" id="player">
