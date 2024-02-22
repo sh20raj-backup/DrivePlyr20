@@ -25,30 +25,31 @@ if ($result->num_rows > 0) {
         $videoScore = '100%';//$row['progress'];
         $userid = $row['user'];
 
-        echo '          <!-- Single Video starts -->
-        <div class="video">
-          <div class="video__thumbnail">
-          <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-          <img src="'.$videoPosterURL.'" alt="" onerror="this.src='https://driveplyr.appspages.online/dashboard/api/Image_not_available.png'"/>
-          </a>
-          </div>
-          <div class="video__details">
-            <div class="author">
-              <img src="http://aninex.com/images/srvc/web_de_icon.png?'.$logo.'" alt="" />
+        echo '
+            <!-- Single Video starts -->
+            <div class="video">
+              <div class="video__thumbnail">
+                <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
+                  <img src="'.$videoPosterURL.'" alt="Video Thumbnail" onerror="this.onerror=null;this.src=\'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png\';"/>
+                </a>
+              </div>
+              <div class="video__details">
+                <div class="author">
+                  <img src="http://aninex.com/images/srvc/web_de_icon.png?'.$logo.'" alt="Author Image" onerror="this.onerror=null;this.src=\'fallback_author.jpg\';"/>
+                </div>
+                <div class="title">
+                  <h3>
+                    <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
+                      '.$videoTitle.'
+                    </a>
+                  </h3>
+                  <a href="../channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
+                  <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
+                </div>
+              </div>
             </div>
-            <div class="title">
-              <h3>
-              <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-                '.$videoTitle.' 
-              </a>
-                </h3>
-              <a href="../channel/'.$userid.'">'.getUser($userid)[0]->name.'</a>
-              <span>'.formatViewsCount($videoViews).' Views • '.convertToRelativeTime($row['date']).'</span>
-            </div>
-          </div>
-        </div>
-        <!-- Single Video Ends -->
-';
+            <!-- Single Video Ends -->
+            '; 
     }
 } else {
     echo '<tr><td colspan="6">No videos found.</td></tr>';
