@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
         <div class="video">
           <div class="video__thumbnail">
           <a href="watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-            <img src="'.$videoPosterURL.'" alt="Video Thumbnail" onerror="this.onerror=null;this.src=\'https://cdn.statically.io/og/theme=dark/'.$videoTitle.'.png\';"/>
+            <img loading="lazy" src="'.$videoPosterURL.'" alt="Video Thumbnail" onerror="this.onerror=null;this.src=\'https://cdn.statically.io/og/theme=dark/'.$videoTitle.'.png\';"/>
           </a>
           </div>
           <div class="video__details">
