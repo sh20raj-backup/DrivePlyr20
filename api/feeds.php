@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
         <div class="video">
           <div class="video__thumbnail">
           <a href="../watch/'.$videoId.'/'.generateSlug($videoTitle).'">
-          <img src="'.$videoPosterURL.'" alt="" />
+          <img src="'.$videoPosterURL.'" alt="" onerror="this.src='https://driveplyr.appspages.online/dashboard/api/Image_not_available.png'"/>
           </a>
           </div>
           <div class="video__details">
