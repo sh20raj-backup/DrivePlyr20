@@ -22,8 +22,6 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  /*object-fit: cover;
-  z-index: -1;*/
 }
 </style>
 </head>
@@ -32,7 +30,7 @@ html, body {
 
     <video poster="<?php echo $poster_url ?>" src="<?php echo $videourl ?>" data-ckin="minimal"></video>
        
-    <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@main/ckin/ckin.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/sh20raj-backup/Sopplayer@v2.0.0/ckin/ckin.js"></script>
   
 </body>
 
